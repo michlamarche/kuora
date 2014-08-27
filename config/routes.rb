@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # put "/questions/:id" => "questions#update"
   # patch "/questions/:id" => "questions#update"
   # delete "/questions/:id" => "questions#destroy"
+  delete "/questions" => "questions#destroy_all"
 end

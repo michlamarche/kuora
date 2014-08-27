@@ -45,6 +45,12 @@ class QuestionsController < ApplicationController
     redirect_to questions_url, notice: 'Question was successfully destroyed.'
   end
 
+  # DESTROY_ALL /questions
+  def destroy_all
+    Question.destroy_all
+    redirect_to questions_url, notice: 'Questions were successfully destroyed.'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question

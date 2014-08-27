@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Listing <%= pluralize(Question.count, "question") %></h1>
 
 <table>
@@ -29,3 +31,4 @@
 <br>
 
 <%= link_to 'New Question', new_question_path %>
+<%= link_to 'Destroy_all', questions_path, method: :delete, data: { confirm: 'Are you sure?' } %>
