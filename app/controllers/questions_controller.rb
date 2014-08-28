@@ -2,8 +2,14 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
+
   def index
-    @questions = Question.all
+    if params[:order] == "desc"
+      @order = "asc"
+    else
+      @order = "desc"
+    end
+    @questions = Question.all.order("text " + params[:order])
   end
 
   # GET /questions/1

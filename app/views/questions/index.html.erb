@@ -29,6 +29,6 @@
 </table>
 
 <br>
-
+<%= link_to 'Order', questions_path(order: @order) %>
 <%= link_to 'New Question', new_question_path %>
 <%= link_to 'Destroy_all', questions_path, method: :delete, data: { confirm: 'Are you sure?' } %>
